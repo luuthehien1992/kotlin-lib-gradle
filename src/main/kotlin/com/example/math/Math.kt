@@ -4,8 +4,8 @@ class Math {
   /**
    * Add
    *
-   * @param x greater than 0
-   * @param y greater than 0
+   * @param x greater than 1
+   * @param y greater than 1
    * @return a integer
    */
   fun add(x: Int, y: Int): Int {

@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.example"
-version = "1.0-SNAPSHOT"
+version = "1.1-SNAPSHOT"
 
 repositories {
   mavenCentral()
@@ -71,8 +71,12 @@ publishing {
   repositories {
     maven {
       // change URLs to point to your repos, e.g. http://my.org/repo
-      val releasesRepoUrl = uri(layout.buildDirectory.dir("repos/releases"))
-      val snapshotsRepoUrl = uri(layout.buildDirectory.dir("repos/snapshots"))
+      val releasesRepoUrl = uri("http://127.0.0.1/releases")
+      val snapshotsRepoUrl = uri("http://127.0.0.1/snapshots")
+      credentials{
+        username = ""
+        password = ""
+      }
       url = if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl
     }
   }
